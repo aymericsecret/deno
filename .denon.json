@@ -1,5 +1,5 @@
 {
-  "files": ["src/server.ts"],
+  "files": ["src/app.ts"],
   "quiet": false,
   "debug": true,
   "fullscreen": false,

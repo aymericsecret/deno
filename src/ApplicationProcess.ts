@@ -1,6 +1,8 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-import { ServiceProvider } from "./ServiceProvider.ts";
+import { ServiceProvider } from "./services/providers/ServiceProvider.ts";
+import notFoundHandler from "./middleware/notFoundHandler.ts";
+import errorHandler from "./middleware/errorHandler.ts";
 
 export type defineApiFn<T extends ServiceProvider> = (
   serviceProvider: T
@@ -63,8 +65,10 @@ export class ApplicationProcess<W extends ServiceProvider> {
       response.body = "up";
     });
 
+    this.app.use(errorHandler(this._serviceProvider));
     this.app.use(router.routes());
     this.app.use(router.allowedMethods());
+    this.app.use(notFoundHandler);
 
     this.app.use((ctx) => {
       // TODO: Error handler

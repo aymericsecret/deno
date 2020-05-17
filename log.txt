@@ -11,3 +11,12 @@ WARNING Hit
 [ERROR] [Application] Error
 [WARNING] Hit
 [ERROR] [Application] Error
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[ERROR] [ErrorHandler] An error has occured
+[WARNING] Hit
+[ERROR] [ErrorHandler] An error has occured
+[WARNING] Hit
+[WARNING] Hit

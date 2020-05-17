@@ -1,4 +1,4 @@
-import LoggerUtil from "./utils/LoggerUtil.ts";
+import LoggerUtil from "../../utils/LoggerUtil.ts";
 import { Logger } from "https://deno.land/std/log/logger.ts";
 
 export interface ServiceContainer {

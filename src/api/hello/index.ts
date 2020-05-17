@@ -1,11 +1,19 @@
-import { ServiceProvider } from "../../ServiceProvider.ts";
+import { ServiceProvider } from "../../services/providers/ServiceProvider.ts";
 
 export default function sayHello(serviceProvider: ServiceProvider) {
-  return ({ response }: { response: any }) => {
+  return async ({ request, response }: { request: any; response: any }) => {
     const { logger } = serviceProvider;
     logger.info("[/hello] Hit");
+    let name: string;
+    if (!request.hasBody) {
+      name = "John Doe";
+    } else {
+      ({
+        value: { name },
+      } = await request.body());
+    }
+
     response.status = 200;
-    response.body = "Hello World !";
-    logger.warning("Hit");
+    response.body = `Hello  ${name}!`;
   };
 }
