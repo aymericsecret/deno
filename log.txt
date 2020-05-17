@@ -1,0 +1,13 @@
+WARNING Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[WARNING] Hit
+[ERROR] [Application] Error
+[ERROR] [Application] Error
+[WARNING] Hit
+[ERROR] [Application] Error
